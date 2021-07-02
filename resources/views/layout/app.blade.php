@@ -7,11 +7,13 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{{ asset('/public/css/dash.css?'.rand()) }}">
-    {{-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> --}}
+  <link href="{{ asset('/public/thirdparty/docs/css/bootstrap-4.5.2.min.css') }}" rel="stylesheet" id="bootstrap-css">
     <script src="{{ asset('/public/js/jquery.js') }}"></script>
+  <script src="{{ asset('/public/thirdparty/docs/js/bootstrap.bundle-4.5.2.min.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('/public/css/dash.css?'.rand()) }}">
+  <link rel="stylesheet" href="{{ asset('/public/thirdparty/dist/css/bootstrap-multiselect.min.css') }}">
+    {{-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> --}}
+    <script src="{{ asset('/public/thirdparty/dist/js/bootstrap-multiselect.min.js') }}"></script>
 	<link rel="icon" href="{{asset("/public/logo/fav.png")}}">
 <style>
 

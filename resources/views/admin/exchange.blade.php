@@ -19,7 +19,8 @@
 		</div>
 		<div class="col-4">
 	<a href="{{ url('/admin/addexchange') }}" class="btn btn-info float-right">Add Exchanges</a>
-	<a href="{{ url('/admin/addconfigure') }}" class="btn btn-danger float-right">Add Configure</a>
+	<a href="{{ url('/admin/addconfigure') }}" class="btn btn-danger float-right">Add Exchange Type</a>
+  <a href="{{ url('/admin/plan') }}" class="btn btn-success float-right">Add Plan</a>
 		</div>
 	</div>
 </header>
@@ -81,10 +82,11 @@
         <img src="{{ url('public') }}`+row['logo']+`" alt="`+row['name']+`" style="width: 100px; border-radius: 100%; heigh:120px">
         </div>
         <div class="col-3 center" style='padding-top: 15px;'>
-        <h3>`+row['name']+`</h3>
+        <h3>`+row['name']+`<br><a style='color: red; font-size: 12px;' target="_blank" href="`+row['type']+`">`+row['type']+`</a></h3>
         </div>
         <div class="col-3 center" style='padding-top: 15px;'>
-        <h4><img src="{{ url('public') }}`+row['configure_logo']+`" style="width: 30px; margin: 5px; border-radius: 100%; heigh:30px">`+row['configure']+`</h4>
+        <h4>`+row['configure'].substring(1)+`</h4>
+        `+row['plan']+`
         </div>
 
         <div class="col-3 right" style='padding-top: 15px;'>
